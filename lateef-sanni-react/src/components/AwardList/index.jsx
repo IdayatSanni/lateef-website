@@ -7,7 +7,7 @@ const AwardList = ({ numberOfAwards }) => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: numberOfAwards || 4,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -40,17 +40,13 @@ const AwardList = ({ numberOfAwards }) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  const awardsToDisplay = numberOfAwards
-    ? awards.slice(0, numberOfAwardss)
-    : awards;
-
   return (
     <Container className='my-4 py-4'>
       <div>
         <h2>Award List</h2>
         <Container className=''>
           <Slider {...settings}>
-            {awardsToDisplay.map((award) => (
+            {awards.map((award) => (
               <div key={award._id}>
                 <Award award={award} />
               </div>

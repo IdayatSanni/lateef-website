@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 function PublicationDetail() {
-  const location = useLocation(); // Get the location object from react-router
+  const location = useLocation();
   const { publication } = location.state || {}; // Extract the publication object from state
 
   if (!publication) {

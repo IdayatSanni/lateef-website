@@ -53,7 +53,7 @@ const Experience = () => {
           </h3>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+          iconStyle={{ background: "rgb(67, 143, 229)", color: "#fff" }}
         />
       </VerticalTimeline>
     </Container>
